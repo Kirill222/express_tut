@@ -9,4 +9,7 @@ app.get('/', (req, res, next) => {
     res.render('index', {engine: "ejs"}) //Sending variables
 })
 
+const usersRouter = require('./routes/users')
+app.use('/users', usersRouter)
+
 app.listen(3000, () => console.log("Server runs on port 3000"))
