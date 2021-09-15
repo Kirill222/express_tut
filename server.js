@@ -6,7 +6,7 @@ const app = express()
 app.set('view engine', 'ejs')
 
 app.get('/', (req, res, next) => {
-    res.render('index')  //when using view engine, the defaul falder or these files is "views/"
+    res.render('index', {engine: "ejs"}) //Sending variables
 })
 
 app.listen(3000, () => console.log("Server runs on port 3000"))
